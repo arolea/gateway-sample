@@ -9,7 +9,7 @@
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 
-	<artifactId>domain</artifactId>
+	<artifactId>model</artifactId>
 
 	<dependencies>
 		<dependency>
@@ -17,6 +17,5 @@
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
 	</dependencies>
-
 
 </project>
