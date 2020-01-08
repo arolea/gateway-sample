@@ -6,6 +6,11 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 
+/**
+ * Route - an id, associated with a collection of predicates and a collection of filters
+ * Predicate - used to match routes, can be chained
+ * Filters - used to modify requests and responses, can be cached
+ */
 @Configuration
 public class GatewayConfig {
 
