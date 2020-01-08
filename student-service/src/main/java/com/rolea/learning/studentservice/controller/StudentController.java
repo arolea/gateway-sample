@@ -14,7 +14,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping(value = "/student")
+@RequestMapping(value = "/students")
 public class StudentController {
 
 	@Autowired

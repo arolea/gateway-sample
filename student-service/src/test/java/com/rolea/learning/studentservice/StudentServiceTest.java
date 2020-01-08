@@ -31,7 +31,7 @@ class StudentServiceTest {
 		student.setLastName("Doe");
 
 		ResponseEntity<Student> createStudentResponse = template.exchange(
-				"/student",
+				"/students",
 				HttpMethod.POST,
 				new HttpEntity<>(student),
 				Student.class
@@ -42,7 +42,7 @@ class StudentServiceTest {
 		assertThat(createdStudent.getStudentId()).isNotNull();
 
 		UriComponents uri = UriComponentsBuilder
-				.fromPath("/student/{id}")
+				.fromPath("/students/{id}")
 				.buildAndExpand(createdStudent.getStudentId());
 
 		ResponseEntity<Student> findStudentByIdResponse = template.exchange(
@@ -55,7 +55,7 @@ class StudentServiceTest {
 		assertThat(findStudentByIdResponse.getBody()).isNotNull();
 
 		ResponseEntity<List<Student>> findAllStudentsResponse = template.exchange(
-				"/student",
+				"/students",
 				HttpMethod.GET,
 				new HttpEntity<>(new HttpHeaders()),
 				new ParameterizedTypeReference<>() {
